@@ -1,7 +1,7 @@
 import React from "react";
 import './ImageTilesDisplay.css'
 import ImageTile from "../ImageTile/ImageTile";
-import data from '../data.json'
+import data from '../../data.json'
 
 function ImageTilesDisplay() {
   const imageGrid = data.map(({ title, imageUrl }) => {

@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Snowy Mountains",
+    "imageUrl": "snowy-mountains.jpeg"
+  },
+  {
+    "title": "Foggy Coniferous Forest",
+    "imageUrl": "misty-green.jpeg"
+  },
+  {
+    "title": "Barbed Fence",
+    "imageUrl": "barbed-fence.jpeg"
+  },
+  {
+    "title": "Black and White Modern Art",
+    "imageUrl": "black-white-abstract.jpeg"
+  },
+  {
+    "title": "Hometown Alleyway",
+    "imageUrl": "hometown-alley-way.jpeg"
+  },
+  {
+    "title": "Oceanic Cliffside",
+    "imageUrl": "ocean-cliffside.jpeg"
+  },
+  {
+    "title": "Starry Lighthouse",
+    "imageUrl": "starry-lighthouse.jpeg"
+  },
+  {
+    "title": "Sunset",
+    "imageUrl": "sunset-backlight.jpeg"
+  }
+]

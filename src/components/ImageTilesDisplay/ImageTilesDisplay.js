@@ -8,8 +8,7 @@ function ImageTilesDisplay() {
     return (<ImageTile imageUrl={imageUrl} title={title}/>)
   })
   return (
-    <div>
-      <p>Testing</p>
+    <div className="ImageTilesDisplay">
       { imageGrid }
     </div>
   )

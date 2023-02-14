@@ -1,12 +1,14 @@
 import React from 'react';
 // import ImageFilter from 'react-image-filter';
 import { Outlet } from 'react-router-dom';
+import NavBar from './NavBar/NavBar';
 import './App.css';
 
 function App() {
 
   return (
     <div className="App">
+      <NavBar />
       <Outlet />
     </div>
   );

@@ -1,23 +1,19 @@
 import React from 'react';
-// import ImageFilter from 'react-image-filter';
-import { Outlet } from 'react-router-dom';
+import { useState } from 'react';
+import { Outlet, } from 'react-router-dom';
 import NavBar from './NavBar/NavBar';
 import './App.css';
 
 function App() {
-
+  const [selectedImage, setSelectedImage] = useState(null);
   return (
     <div className="App">
       <NavBar />
-      <Outlet />
+      <Outlet context={[selectedImage, setSelectedImage]}/>
+      {console.log(selectedImage)}
     </div>
   );
 }
 
 export default App;
-      /* <ImageFilter
-        image='https://source.unsplash.com/random/1200x800'
-        filter={ 'duotone' }
-        colorOne={ [40, 250, 250] }
-        colorTwo={ [250, 150, 0] }
-      /> */
+

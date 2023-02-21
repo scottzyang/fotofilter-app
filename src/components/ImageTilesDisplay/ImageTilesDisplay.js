@@ -1,7 +1,7 @@
 import React from "react";
 import './ImageTilesDisplay.css'
 import ImageTile from "../ImageTile/ImageTile";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, Link } from "react-router-dom";
 import data from '../../data.json'
 
 function ImageTilesDisplay() {
@@ -12,7 +12,18 @@ function ImageTilesDisplay() {
   })
   return (
     <div className="ImageTilesDisplay">
-      { imageGrid }
+      
+      {selectedImage && 
+        <>
+          <h3>Selected Photo:</h3>
+          <img src={selectedImage} alt="selected" width="500"/>
+          <br/>
+          <button><Link to={`/editor`}>Start Editing!</Link></button>
+        </>
+      }
+      <div className="image-grid">
+        { imageGrid }
+      </div>
     </div>
   )
 }

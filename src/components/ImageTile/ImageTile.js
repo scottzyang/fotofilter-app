@@ -6,7 +6,7 @@ function ImageTile({ imageUrl, title, setSelectedImage }) {
   return(
     <div className='ImageTile'>
       <Link onClick={() => setSelectedImage(`images/${imageUrl}`)}>
-        <img src={`${process.env.PUBLIC_URL}/images/${imageUrl}`} alt={title}/>
+        <img width="300" src={`${process.env.PUBLIC_URL}/images/${imageUrl}`} alt={title}/>
       </Link>
     </div>
   )

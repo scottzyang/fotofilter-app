@@ -1,6 +1,7 @@
 import ImageFilter from 'react-image-filter';
 import { useOutletContext } from "react-router-dom";
 import { useState } from 'react';
+import DuoColorDials from '../DuoColorDials/DuoColorDials';
 
 function Editor() {
   // eslint-disable-next-line no-unused-vars
@@ -20,11 +21,10 @@ function Editor() {
   return(
     <div style={{ width:'500px', margin: 'auto' }}>
       <h1>Editor</h1>
-      <button onClick={() => setFilter("duotone")}>Duotone</button>
-      <button onClick={() => setFilter("invert")}>Invert</button>
-      <button onClick={() => setFilter("grayscale")}>Grayscale</button>
-      <button onClick={() => setFilter("sepia")}>Sepia</button>
-      {filter && <button onClick={() => setFilter(undefined)}>Reset</button>}      
+      <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("duotone")}>Duotone</button>
+      <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("invert")}>Invert</button>
+      <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("grayscale")}>Grayscale</button>
+      <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("sepia")}>Sepia</button>
       { filter === 'duotone' && 
       <>
         <ImageFilter 
@@ -33,43 +33,16 @@ function Editor() {
           colorOne={ [redOne, greenOne, blueOne] }
           colorTwo={ [redTwo, greenTwo, blueTwo] }
         />
-        <section className='color-one'>
-          <h3>Color One Adjustment</h3>
-          <div>
-            <label htmlFor="one-red-adjust">Red</label>
-            <input onChange={(e) => setRedOne(e.target.value)} id="one-red-adjust" name="one-red-adjust" type="range" min="0" max="255"/>
-          </div>
-          <div>
-            <label htmlForr="one-green-adjust">Green</label>
-            <input onChange={(e) => setGreenOne(e.target.value)} id="one-green-adjust" name="one-green-adjust" type="range" min="0" max="255"/>
-          </div>
-          <div>
-            <label htmlFor="one-blue-adjust">Blue</label>
-            <input onChange={(e) => setBlueOne(e.target.value)} id="one-blue-adjust" name="one-blue-adjust" type="range" min="0" max="255"/>
-          </div>
-        </section>
-        <section className='color-two'>
-          <h3>Color Two Adjustment</h3>
-          <div>
-            <label htmlFor="two-red-adjust">Red</label>
-            <input onChange={(e) => setRedTwo(e.target.value)} id="two-red-adjust" name="two-red-adjust" type="range" min="0" max="255"/>
-          </div>
-          <div>
-            <label htmlFor="two-green-adjust">Green</label>
-            <input onChange={(e) => setGreenTwo(e.target.value)} id="two-green-adjust" name="two-green-adjust" type="range" min="0" max="255"/>
-          </div>
-          <div>
-            <label htmlFor="two-blue-adjust">Blue</label>
-            <input onChange={(e) => setBlueTwo(e.target.value)} id="two-blue-adjust" name="two-blue-adjust" type="range" min="0" max="255"/>
-          </div>
-        </section>
+        <DuoColorDials setRedOne={setRedOne} setGreenOne={setGreenOne} setBlueOne={setBlueOne} setRedTwo={setRedTwo} setGreenTwo={setGreenTwo} setBlueTwo={setBlueTwo}/>
       </>
       }
+      
       { filter !== 'duotone' &&       
       <ImageFilter 
         image={selectedImage}
         filter={filter}
-      />}
+      />}  
+      {filter && <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter(undefined)}>Reset</button>}    
     </div>
   )
 }

@@ -6,6 +6,7 @@ function Home() {
     <div>
       <h1>homepage</h1>
       <Link to={`/select-image`}>Use Provided Images</Link>
+      <br/>
       <Link to={`/upload-image`}>Upload Local Image</Link>
     </div>
   )

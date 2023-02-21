@@ -1,9 +1,1 @@
-.image-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
-.image-grid>* {
-  margin: 1em;
-}

@@ -5,12 +5,12 @@ function NavBar() {
   return(
     <div className='NavBar'>
       <header>
-        <h1>FotoPhilter</h1>
-        <p className="NavBar-Subtitle">FILTA YA OWN PHOTA</p>
+        <h1>Foto Filter</h1>
+        <p className="NavBar-Subtitle">Foto Filtering Fun</p>
       </header>
       
       <nav>
-        <NavLink className={({ isActive }) => isActive? "nav-link-active" : 'nav-link'} to='/'>About</NavLink>
+        <NavLink className={({ isActive }) => isActive? "nav-link-active" : 'nav-link'} to='/'>HOME</NavLink>
       </nav>
     </div>
   )

@@ -1,17 +1,22 @@
 import React from "react";
-import './Home.css'
 import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div>
-      <h1>homepage</h1>
-      <div className="button">
-        <Link to={`/select-image`}><img className="image-button" width="200" src={`${process.env.PUBLIC_URL}/images/select-image.png`} alt="upload"/></Link>
-      </div>
-      <br/>
-      <div className="button">
-        <Link to={`/upload-image`}><img className="image-button" width="200"src={`${process.env.PUBLIC_URL}/images/upload.png`} alt="upload"/></Link>
+    <div className="flex justify-center">
+      <div className="grid gap-14 grid-cols-[300px_300px] m-12">
+        <div className="flex flex-col justify-center">
+          <p className="font-sans m-4 text-xl font-semibold">Select an Image</p>
+          <div className="bg-yellow-100 border-black border-4 rounded-2xl w-84 hover:opacity-75">
+            <Link to={`/select-image`}><img className="image-button" width="300" src={`${process.env.PUBLIC_URL}/images/select-image.png`} alt="upload"/></Link>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center">
+          <p className="font-sans m-4 text-xl font-semibold">Upload an Image</p>
+          <div className="bg-yellow-100 border-black border-4 rounded-2xl w-84 hover:opacity-75">
+            <Link to={`/upload-image`}><img className="image-button" width="300"src={`${process.env.PUBLIC_URL}/images/upload.png`} alt="upload"/></Link>
+          </div>
+        </div>
       </div>
     </div>
   )

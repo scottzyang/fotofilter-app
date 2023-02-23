@@ -11,12 +11,12 @@ function ImageTilesDisplay() {
     return (<ImageTile key={imageUrl} imageUrl={imageUrl} title={title} setSelectedImage={setSelectedImage}/>)
   })
   return (
-    <section className="image-tiles flex justify-evenly h-full">
+    <section className="image-tiles flex justify-center h-full">
       <section className="selected-image">
         {!selectedImage && 
           <>
             <h3 className="text-xl m-4 font-semibold">Selected Photo:</h3>
-            <section className="bg-gray-300 border-black border-4 rounded-2xl">
+            <section className="image-selection bg-gray-300 border-black border-4 rounded-2xl mx-4">
               <img src={`${process.env.PUBLIC_URL}/images/no-pictures.png`} alt="selected" width="400"/>
             </section>
           </>
@@ -25,7 +25,7 @@ function ImageTilesDisplay() {
         {selectedImage && 
           <>
             <h3 className="text-xl m-4 font-semibold">Selected Photo:</h3>
-            <section className="border-black border-4 w-500 rounded-2xl">
+            <section className="image-selection border-black border-4 w-500 rounded-2xl mx-4">
               <img className="rounded-xl" src={selectedImage} alt="selected" width="400"/>
             </section>
           </>
@@ -37,7 +37,7 @@ function ImageTilesDisplay() {
       </section>
       <section className="flex flex-col items-center">
         <h3 className="text-xl m-4 font-semibold">Photo Selection:</h3>
-        <section className="tiles-display border-black border-4 rounded-2xl grid grid-cols-2 gap-2 overflow-y-scroll bg-gray-300">
+        <section className="tiles-display border-black border-4 rounded-2xl grid grid-cols-2 gap-2 overflow-y-scroll bg-gray-300 mx-4">
           { imageGrid }
         </section>
       </section>

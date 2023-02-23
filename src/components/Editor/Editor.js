@@ -19,9 +19,9 @@ function Editor() {
   const [blueTwo, setBlueTwo] = useState(10)
 
   return(
-    <div style={{ width:'500px', margin: 'auto' }}>
+    <section style={{ width:'500px', margin: 'auto' }}>
       { filter === 'duotone' && 
-      <div>
+      <section>
         <ImageFilter 
           image={selectedImage}
           filter={filter}
@@ -29,7 +29,7 @@ function Editor() {
           colorTwo={ [redTwo, greenTwo, blueTwo] }
         />
         <DuoColorDials setRedOne={setRedOne} setGreenOne={setGreenOne} setBlueOne={setBlueOne} setRedTwo={setRedTwo} setGreenTwo={setGreenTwo} setBlueTwo={setBlueTwo}/>
-      </div>
+      </section>
       }
       
       { filter !== 'duotone' &&       
@@ -42,7 +42,7 @@ function Editor() {
       <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("invert")}>Invert</button>
       <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("grayscale")}>Grayscale</button>
       <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("sepia")}>Sepia</button>
-    </div>
+    </section>
   )
 }
 

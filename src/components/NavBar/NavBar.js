@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return(
-    <div className='NavBar'>
+    <section className='NavBar'>
       <header className="bg-indigo-300 h-40 flex flex-col justify-center">
         <h1 className="text-5xl font-mono m-2 font-bold">FotoFilter</h1>
         <nav className="m-4">
@@ -12,7 +12,7 @@ function NavBar() {
           <NavLink className="border-black border-4 rounded-lg py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" to='/upload-image'>Upload</NavLink>
         </nav>
       </header>
-    </div>
+    </section>
   )
 }
 

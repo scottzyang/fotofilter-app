@@ -1,4 +1,5 @@
 import ImageFilter from 'react-image-filter';
+import './Editor.css'
 import { useOutletContext } from "react-router-dom";
 import { useState } from 'react';
 import DuoColorDials from '../DuoColorDials/DuoColorDials';
@@ -19,29 +20,37 @@ function Editor() {
   const [blueTwo, setBlueTwo] = useState(10)
 
   return(
-    <section style={{ width:'500px', margin: 'auto' }}>
+    <section className="editor flex justify-center m-auto">
       { filter === 'duotone' && 
-      <section>
-        <ImageFilter 
-          image={selectedImage}
-          filter={filter}
-          colorOne={ [redOne, greenOne, blueOne] }
-          colorTwo={ [redTwo, greenTwo, blueTwo] }
-        />
-        <DuoColorDials setRedOne={setRedOne} setGreenOne={setGreenOne} setBlueOne={setBlueOne} setRedTwo={setRedTwo} setGreenTwo={setGreenTwo} setBlueTwo={setBlueTwo}/>
-      </section>
+        <section className='border-black border-8 mt-8'>
+          <ImageFilter 
+            image={selectedImage}
+            filter={filter}
+            colorOne={ [redOne, greenOne, blueOne] }
+            colorTwo={ [redTwo, greenTwo, blueTwo] }
+          />
+        </section>
       }
       
       { filter !== 'duotone' &&       
-      <ImageFilter 
-        image={selectedImage}
-        filter={filter}
-      />}  
-      {filter && <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter(undefined)}>Reset</button>}    
-      <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("duotone")}>Duotone</button>
-      <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("invert")}>Invert</button>
-      <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("grayscale")}>Grayscale</button>
-      <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("sepia")}>Sepia</button>
+        <section className='border-black border-8 mt-8'>
+          <ImageFilter 
+          image={selectedImage}
+          filter={filter}
+          />
+        </section>
+      }
+      <section>
+        <section className='mt-8 flex items-start flex-wrap'>
+          <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter(undefined)}>Reset</button> 
+          <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("duotone")}>Duotone</button>
+          <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("invert")}>Invert</button>
+          <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("grayscale")}>Grayscale</button>
+          <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("sepia")}>Sepia</button>
+        </section>
+        {filter === "duotone" && <DuoColorDials setRedOne={setRedOne} setGreenOne={setGreenOne} setBlueOne={setBlueOne} setRedTwo={setRedTwo} setGreenTwo={setGreenTwo} setBlueTwo={setBlueTwo}/>}
+      </section>
+      
     </section>
   )
 }

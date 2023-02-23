@@ -26,6 +26,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+## Future Iterations
+- Allow users to download their filtered image.
+- Allow users to add filtered image to separate Gallery tab. 
+
 ## Attribution
 
  - [No Photo Icon - Created by Icon.doit](https://www.flaticon.com/free-icons/no-photo)

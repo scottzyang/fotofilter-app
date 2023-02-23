@@ -3,7 +3,7 @@
 
 FotoFilter is a Web Application created with React, and styled with Tailwind CSS. Users are able to select from a predetermined list of photos, or upload one of their one from their local computer. Once selected, the user can choose to apply several filters onto their photo. 
 
-<img src="./public/images/front-page.png" width="600">
+<img src="./public/images/readme-page.png" width="600">
 
 ## Tech Stack/Libraries
 

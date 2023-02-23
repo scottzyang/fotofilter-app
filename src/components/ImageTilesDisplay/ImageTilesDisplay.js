@@ -1,4 +1,5 @@
 import React from "react";
+import './ImageTilesDisplay.css'
 import ImageTile from "../ImageTile/ImageTile";
 import { useOutletContext, Link } from "react-router-dom";
 import data from '../../data.json'
@@ -10,11 +11,11 @@ function ImageTilesDisplay() {
     return (<ImageTile key={imageUrl} imageUrl={imageUrl} title={title} setSelectedImage={setSelectedImage}/>)
   })
   return (
-    <section className="flex justify-end">
-      <section className="fixed left-36">
+    <section className="image-tiles flex justify-evenly h-full">
+      <section className="selected-image">
         {!selectedImage && 
           <>
-            <h3 className="text-xl m-2 font-semibold">Selected Photo:</h3>
+            <h3 className="text-xl m-4 font-semibold">Selected Photo:</h3>
             <section className="bg-gray-300 border-black border-4 rounded-2xl">
               <img src={`${process.env.PUBLIC_URL}/images/no-pictures.png`} alt="selected" width="400"/>
             </section>
@@ -23,7 +24,7 @@ function ImageTilesDisplay() {
       
         {selectedImage && 
           <>
-            <h3 className="text-xl m-2 font-semibold">Selected Photo:</h3>
+            <h3 className="text-xl m-4 font-semibold">Selected Photo:</h3>
             <section className="border-black border-4 w-500 rounded-2xl">
               <img className="rounded-xl" src={selectedImage} alt="selected" width="400"/>
             </section>
@@ -35,8 +36,8 @@ function ImageTilesDisplay() {
         </section>
       </section>
       <section className="flex flex-col items-center">
-        <h3 className="text-xl mr-24 mt-2 mb-2 font-semibold">Selected Photo:</h3>
-        <section className="mr-24 grid grid-cols-2 gap-6 right-0">
+        <h3 className="text-xl m-4 font-semibold">Photo Selection:</h3>
+        <section className="tiles-display border-black border-4 rounded-2xl grid grid-cols-2 gap-2 overflow-y-scroll bg-gray-300">
           { imageGrid }
         </section>
       </section>

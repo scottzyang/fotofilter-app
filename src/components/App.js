@@ -8,11 +8,15 @@ import Footer from './Footer/Footer'
 function App() {
   const [selectedImage, setSelectedImage] = useState(null);
   return (
-    <div className="App">
-      <NavBar />
-      <Outlet context={[selectedImage, setSelectedImage]}/>
-      {console.log(selectedImage)}
-      <Footer />
+    <div className="App h-screen">
+      <div>
+        <NavBar />
+        <Outlet context={[selectedImage, setSelectedImage]}/>
+        {console.log(selectedImage)}
+      </div>
+      <div className='relative inset-x-0 bottom-0'>
+        <Footer />
+      </div>
     </div>
   );
 }

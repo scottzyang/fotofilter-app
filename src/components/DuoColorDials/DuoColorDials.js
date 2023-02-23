@@ -3,7 +3,7 @@ function DuoColorDials({setRedOne, setGreenOne, setBlueOne, setRedTwo, setGreenT
   return (
     <div>
       <section className='color-one'>
-        <h3>Color One Adjustment</h3>
+        <h3>Dark Tone Adjustment</h3>
         <div>
           <label htmlFor="one-red-adjust">Red</label>
           <input onChange={(e) => setRedOne(e.target.value)} id="one-red-adjust" name="one-red-adjust" type="range" min="0" max="255"/>
@@ -18,7 +18,7 @@ function DuoColorDials({setRedOne, setGreenOne, setBlueOne, setRedTwo, setGreenT
         </div>
       </section>
       <section className='color-two'>
-        <h3>Color Two Adjustment</h3>
+        <h3>Light Tone Adjustment</h3>
         <div>
           <label htmlFor="two-red-adjust">Red</label>
           <input onChange={(e) => setRedTwo(e.target.value)} id="two-red-adjust" name="two-red-adjust" type="range" min="0" max="255"/>

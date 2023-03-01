@@ -16,7 +16,7 @@ function ImageTilesDisplay() {
         {!selectedImage && 
           <>
             <h3 className="text-xl m-4 font-semibold">Selected Photo:</h3>
-            <section className="image-selection bg-gray-300 border-black border-4 rounded-2xl mx-4">
+            <section className="image-selection bg-gray-300 border-black border-4 rounded-2xl mx-4 drop-shadow-2xl">
               <img src={`${process.env.PUBLIC_URL}/images/no-pictures.png`} alt="selected" width="400"/>
             </section>
           </>
@@ -37,7 +37,7 @@ function ImageTilesDisplay() {
       </section>
       <section className="flex flex-col items-center">
         <h3 className="text-xl m-4 font-semibold">Photo Selection:</h3>
-        <section className="tiles-display border-black border-4 rounded-2xl grid grid-cols-2 gap-2 overflow-y-scroll bg-gray-300 mx-4">
+        <section className="tiles-display border-black border-4 rounded-2xl grid grid-cols-2 gap-2 overflow-y-scroll bg-gray-300 mx-4 drop-shadow-2xl">
           { imageGrid }
         </section>
       </section>

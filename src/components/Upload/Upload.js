@@ -8,13 +8,13 @@ function Upload() {
     <section className="flex flex-col justify-center items-center">
       <h1 className="text-xl m-2 font-semibold">Upload Your Own Image</h1>
       {!selectedImage && 
-        <section className="bg-gray-300 border-black border-4 w-500 h-500 rounded-2xl">
+        <section className="bg-gray-300 border-black border-4 w-500 h-500 rounded-2xl drop-shadow-2xl">
           <img src={`${process.env.PUBLIC_URL}/images/no-pictures.png`} alt="selected" width="400"/>
         </section>
       }
       {selectedImage && (
         <>
-          <section className="fbg-gray-300 border-black border-4 w-500 h-500 rounded-2xl">
+          <section className="fbg-gray-300 border-black border-4 w-500 h-500 rounded-2xl drop-shadow-2xl">
             <img className="rounded-xl" alt="Uploaded file not found" width={"400px"} src={selectedImage} />
           </section>
         </>

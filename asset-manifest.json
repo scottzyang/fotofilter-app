@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fotofilter-app/static/css/main.04bf45c5.css",
+    "main.js": "/fotofilter-app/static/js/main.a0a3f42e.js",
+    "static/js/787.6ba6b6a5.chunk.js": "/fotofilter-app/static/js/787.6ba6b6a5.chunk.js",
+    "index.html": "/fotofilter-app/index.html",
+    "main.04bf45c5.css.map": "/fotofilter-app/static/css/main.04bf45c5.css.map",
+    "main.a0a3f42e.js.map": "/fotofilter-app/static/js/main.a0a3f42e.js.map",
+    "787.6ba6b6a5.chunk.js.map": "/fotofilter-app/static/js/787.6ba6b6a5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04bf45c5.css",
+    "static/js/main.a0a3f42e.js"
+  ]
+}

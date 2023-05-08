@@ -30,14 +30,16 @@ function ImageTilesDisplay() {
             </section>
           </>
         }
-        <section className="m-8">
-          <Link style={!selectedImage ? {pointerEvents: 'none'} : {pointerEvents: ''}} className={!selectedImage ? "border-black border-4 rounded-2xl py-2 px-4 bg-indigo-500/75 opacity-50 m-5" : "border-black border-4 rounded-2xl py-2 px-4 bg-indigo-500/75 hover:opacity-75 m-5"} to={`/editor`}>Start Editing!</Link>
-          <Link style={!selectedImage ? {pointerEvents: 'none'} : {pointerEvents: ''}} className={!selectedImage ? "border-black border-4 rounded-2xl py-2 px-4 bg-indigo-500/75 opacity-50 m-5" : "border-black border-4 rounded-2xl py-2 px-4 bg-indigo-500/75 hover:opacity-75 m-5"} onClick={() => setSelectedImage(null)}>Remove</Link>
-        </section>
+      <section className="m-8 flex flex-col sm:flex-row sm:items-center sm:justify-center">
+        <Link style={!selectedImage ? {pointerEvents: 'none'} : {pointerEvents: ''}} className={!selectedImage ? "border-black border-4 rounded-2xl py-2 px-4 bg-indigo-500/75 opacity-50 m-5 text-xs md:text-base" : "border-black border-4 rounded-2xl py-2 px-4 bg-indigo-500/75 hover:opacity-75 m-5 text-xs md:text-base"} to={`/editor`}>Start Editing!</Link>
+        <Link style={!selectedImage ? {pointerEvents: 'none'} : {pointerEvents: ''}} className={!selectedImage ? "border-black border-4 rounded-2xl py-2 px-4 bg-indigo-500/75 opacity-50 m-5 text-xs md:text-base" : "border-black border-4 rounded-2xl py-2 px-4 bg-indigo-500/75 hover:opacity-75 m-5 text-xs md:text-base"} onClick={() => setSelectedImage(null)}>Remove</Link>
+      </section>
+
+
       </section>
       <section className="flex flex-col items-center">
         <h3 className="text-xl m-4 font-semibold">Photo Selection:</h3>
-        <section className="tiles-display border-black border-4 rounded-2xl grid grid-cols-2 gap-2 overflow-y-scroll bg-gray-300 mx-4 drop-shadow-2xl">
+        <section className="tiles-display border-black border-4 rounded-2xl grid grid-cols-2 gap-2 overflow-y-scroll bg-gray-300 drop-shadow-2xl">
           { imageGrid }
         </section>
       </section>

@@ -22,7 +22,7 @@ function Editor() {
   return(
     <section className="md:w-9/12 flex flex-col justify-center m-auto md:flex-row">
       { filter === 'duotone' &&
-        <section className='md:border-black md:border-8 mt-8'>
+        <section aria-label="Image filter preview" className='md:border-black md:border-8 mt-8'>
           <ImageFilter
             image={selectedImage}
             filter={filter}
@@ -33,7 +33,7 @@ function Editor() {
       }
 
       { filter !== 'duotone' &&
-        <section className='md:border-black md:border-8 mt-8'>
+        <section aria-label="Image filter preview" className='md:border-black md:border-8 mt-8'>
           <ImageFilter
           image={selectedImage}
           filter={filter}
@@ -41,16 +41,15 @@ function Editor() {
         </section>
       }
       <section>
-        <section className='mt-8 flex items-start flex-wrap'>
-          <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter(undefined)}>Reset</button>
-          <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("duotone")}>Duotone</button>
-          <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("invert")}>Invert</button>
-          <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("grayscale")}>Grayscale</button>
-          <button className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("sepia")}>Sepia</button>
+        <section role="toolbar" className='mt-8 flex items-start flex-wrap'>
+          <button aria-label="Reset filter" className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter(undefined)}>Reset</button>
+          <button aria-label="Duotone filter" className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("duotone")}>Duotone</button>
+          <button aria-label="Invert filter" className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("invert")}>Invert</button>
+          <button aria-label="Grayscale filter" className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("grayscale")}>Grayscale</button>
+          <button aria-label="Sepia filter" className="border-black border-4 rounded-2xl py-1 px-4 bg-indigo-500/75 hover:opacity-75 m-2" onClick={() => setFilter("sepia")}>Sepia</button>
         </section>
         {filter === "duotone" && <DuoColorDials setRedOne={setRedOne} setGreenOne={setGreenOne} setBlueOne={setBlueOne} setRedTwo={setRedTwo} setGreenTwo={setGreenTwo} setBlueTwo={setBlueTwo}/>}
       </section>
-
     </section>
   )
 }

@@ -10,7 +10,7 @@ function Upload() {
     <section role="region" aria-label="Upload Your Own Image" class="flex flex-col justify-center items-center">
       <h1 class="text-xl m-2 font-semibold">Upload Your Own Image</h1>
       {!selectedImage &&
-        <figure role="img" aria-label="No image selected" class="bg-gray-300 border-black border-4 w-500 h-500 rounded-2xl drop-shadow-2xl">
+        <figure role="img" aria-label="No image selected" class="bg-gray-300 md:border-black md:border-4 w-500 h-500 md:rounded-2xl drop-shadow-2xl">
           <img src={`${process.env.PUBLIC_URL}/images/no-pictures.png`} alt="No image selected" width="400"/>
         </figure>
       }

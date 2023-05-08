@@ -33,7 +33,7 @@ function Editor() {
       }
 
       { filter !== 'duotone' &&
-        <section className='border-black border-8 mt-8'>
+        <section className='md:border-black md:border-8 mt-8'>
           <ImageFilter
           image={selectedImage}
           filter={filter}

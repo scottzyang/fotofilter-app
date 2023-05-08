@@ -11,6 +11,7 @@ FotoFilter is a Web Application created with React, and styled with Tailwind CSS
 **Libraries:** [React-Image-Filter](https://github.com/Stanko/react-image-filter)
 
 ## Wireframes
+- [Wireframes Created with Figma](https://www.figma.com/file/Y7Y2lVF7ojy24Bn4jbC2jQ/fotoFilter-Wireframe?type=design&node-id=0%3A1&t=j1azRElulfGvD8sD-1)
 
 ### Mobile Design
 <img src="./public/images/mobile-wireframes.png" width="1000"/>

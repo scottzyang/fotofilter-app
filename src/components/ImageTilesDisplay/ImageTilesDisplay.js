@@ -13,7 +13,7 @@ function ImageTilesDisplay() {
   return (
     <section className="image-tiles flex justify-center h-full">
       <section className="selected-image">
-        {!selectedImage && 
+        {!selectedImage &&
           <>
             <h3 className="text-xl m-4 font-semibold">Selected Photo:</h3>
             <section className="image-selection bg-gray-300 border-black border-4 rounded-2xl mx-4 drop-shadow-2xl">
@@ -21,8 +21,8 @@ function ImageTilesDisplay() {
             </section>
           </>
         }
-      
-        {selectedImage && 
+
+        {selectedImage &&
           <>
             <h3 className="text-xl m-4 font-semibold">Selected Photo:</h3>
             <section className="image-selection border-black border-4 w-500 rounded-2xl mx-4">

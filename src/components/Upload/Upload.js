@@ -7,18 +7,15 @@ function Upload() {
   return(
     <section className="flex flex-col justify-center items-center">
       <h1 className="text-xl m-2 font-semibold">Upload Your Own Image</h1>
-      {!selectedImage && 
+      {!selectedImage &&
         <section className="bg-gray-300 border-black border-4 w-500 h-500 rounded-2xl drop-shadow-2xl">
           <img src={`${process.env.PUBLIC_URL}/images/no-pictures.png`} alt="selected" width="400"/>
         </section>
       }
       {selectedImage && (
-        <>
-          <section className="fbg-gray-300 border-black border-4 w-500 h-500 rounded-2xl drop-shadow-2xl">
-            <img className="rounded-xl" alt="Uploaded file not found" width={"400px"} src={selectedImage} />
-          </section>
-        </>
-
+        <section className="bg-gray-300 border-black border-4 w-500 h-500 rounded-2xl drop-shadow-2xl">
+          <img className="rounded-xl" alt="Uploaded file not found" width={"400px"} src={selectedImage} />
+        </section>
       )}
       <section className='m-4'>
         <input
@@ -38,10 +35,32 @@ function Upload() {
           }}
         />
       </section>
-      <section className='m-8'>
-        <Link style={!selectedImage ? {pointerEvents: 'none'} : {pointerEvents: ''}} className={!selectedImage ? "border-black border-4 rounded-2xl py-2 px-4 bg-indigo-500/75 opacity-50 m-5" : "border-black border-4 rounded-2xl py-2 px-4 bg-indigo-500/75 hover:opacity-75 m-5"} to={`/editor`}>Start Editing!</Link>
-        <Link style={!selectedImage ? {pointerEvents: 'none'} : {pointerEvents: ''}} className={!selectedImage ? "border-black border-4 rounded-2xl py-2 px-4 bg-indigo-500/75 opacity-50 m-5" : "border-black border-4 rounded-2xl py-2 px-4 bg-indigo-500/75 hover:opacity-75 m-5"} onClick={() => setSelectedImage(null)}>Remove</Link>
-      </section>
+<section className="m-8 flex flex-wrap justify-center sm:flex-nowrap">
+  <Link
+    style={!selectedImage ? { pointerEvents: "none" } : { pointerEvents: "" }}
+    className={
+      !selectedImage
+        ? "border-black border-4 rounded-2xl py-2 px-4 bg-indigo-500/75 opacity-50 m-5"
+        : "border-black border-4 rounded-2xl py-2 px-4 bg-indigo-500/75 hover:opacity-75 m-5"
+    }
+    to={`/editor`}
+  >
+    Start Editing!
+  </Link>
+  <Link
+    style={!selectedImage ? { pointerEvents: "none" } : { pointerEvents: "" }}
+    className={
+      !selectedImage
+        ? "border-black border-4 rounded-2xl py-2 px-4 bg-indigo-500/75 opacity-50 m-5"
+        : "border-black border-4 rounded-2xl py-2 px-4 bg-indigo-500/75 hover:opacity-75 m-5"
+    }
+    onClick={() => setSelectedImage(null)}
+  >
+    Remove
+  </Link>
+</section>
+
+
     </section>
   )
 }
